@@ -1,4 +1,6 @@
 ﻿**Sơ đồ quan hệ thực thể ERD:**
+ 
+![image](https://github.com/3thang10/midterm-java/assets/30361534/213349f6-53bd-46fc-bada-cc6fa52eade3)
 
 **Các Patterns, Principles được áp dụng:**
 
@@ -9,6 +11,9 @@
 
 **Cấu trúc của source code:**
 
+![image](https://github.com/3thang10/midterm-java/assets/30361534/9d999d61-ae27-4d19-b749-cbb525554b08)
+
+
 \+ Server (Spring boot): gồm 2 thành phần chính là Repository và Security. Repository sử dụng thư viện Spring Data Rest cung cấp đầy đủ các endpoint sẵn. Security thực hiện xác thực và phân quyền.
 \+ Client (React JS) phân chia theo các component và giao tiếp với server thông qua các util gọi API, sử dụng các state để hiện thị và cập nhật giao diện mới.
 
@@ -16,7 +21,7 @@
 
 \* YÊU CẦU: MySQL, JDK (17 hoặc mới hơn), IDEA có hỗ trợ build project Gradle (Intellij), NodeJS (npm), Git.
 
-`	`+ Bước 1: git clone
+`	`+ Bước 1: git clone https://github.com/3thang10/midterm-java.git
 
 \+ Bước 2: Mở bằng intellij sau đó ấn tổ hợp phím Alt + F12 để mở terminal. Sau đó gõ:
 
@@ -54,27 +59,44 @@ Nếu như dùng port mysql khác hoặc tại địa chỉ khác thì thay đ�
 
 \- Authentication - đăng nhập bằng username, password: http://localhost:8080/authenticate
 
+![image](https://github.com/3thang10/midterm-java/assets/30361534/e02eaa65-42d1-4d16-8b83-ccd62fa63183)
+
+
 \- lấy tất cả sản phẩm: http://localhost:8080/products
 
+![image](https://github.com/3thang10/midterm-java/assets/30361534/91607aa4-71dd-4a49-8d8d-6c2345d390bd)
 
 \- lấy tất cả sản phẩm có categoryid = 2: http://localhost:8080/products?categoryId=2
 
-
+![image](https://github.com/3thang10/midterm-java/assets/30361534/b34263e0-4501-4000-bc29-8db2b96ddc33)
 
 \- lấy products có categoryid = 2 và có giá từ 0 đến 15$:
 
+![image](https://github.com/3thang10/midterm-java/assets/30361534/e6fe7bd1-4c88-44ef-88a3-aaec1fac49ac)
+
 \- lấy products có giá từ cao xuống thấp:
+
+![image](https://github.com/3thang10/midterm-java/assets/30361534/2c9afa43-7745-4be2-be29-870e301e7e38)
 
 \- lấy products có giá từ thấp lên cao:
 
-\- lấy tất cả sản phẩm trong giỏ hàng: http://localhost:8080/carts
+![image](https://github.com/3thang10/midterm-java/assets/30361534/e2c8513c-be10-4d0c-809c-4e6e7327017c)
 
-\- xóa sản phẩm trong giỏ hàng có id = 8: http://localhost:8080/carts/delete/8
+\- lấy tất cả sản phẩm trong giỏ hàng: GET: http://localhost:8080/carts
 
-\- tạo một đơn hàng mới:
+![image](https://github.com/3thang10/midterm-java/assets/30361534/3cc8210c-ace9-4ce0-bd63-e84a336917ed)
 
-\- thêm 1 sản phẩm vào giỏ hàng:
+\- xóa sản phẩm trong giỏ hàng có id = 8: POST: http://localhost:8080/carts/delete/8
 
+![image](https://github.com/3thang10/midterm-java/assets/30361534/04fd67d7-7010-425f-8208-1cb3623605d9)
+
+\- tạo một đơn hàng mới: POST: http://localhost:8080/order
+
+![image](https://github.com/3thang10/midterm-java/assets/30361534/0cbfeeeb-6159-4fb8-81c3-d066c632e502)
+
+\- thêm 1 sản phẩm vào giỏ hàng: POST: http://localhost:8080/carts
+
+![image](https://github.com/3thang10/midterm-java/assets/30361534/1108e4b3-06ab-4ac9-96cf-050bfc617db2)
 
 
 
